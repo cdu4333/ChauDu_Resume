@@ -5,41 +5,30 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <link rel="stylesheet" href="style.css">
+      <script src="resume-interactive.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <title>CHAUDU_RESUME</title>
       <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-      <h1 id="myName">CHAU N. DU</h1>
-      <h3>Web Developer</h3>
+      
   </head>
 
   <body>
-    <style>
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 45% 55%;
-        grid-gap: 10px;
-        background-color: lightblue;
-        padding:60px;
-      }
-  
-      .grid-container > div {
-        background-color: lightgrey;
-        text-align: center;
-        padding:50px 0;
-        font-size: 20px;
-      }
-    </style>
+      <h1 class="animate__animated animate__fadeInRightBig" id="myName">CHAU N. DU</h1>
+      <h3 class="animate__animated animate__fadeInTopRight" id="title">Web Developer</h3>
       <div class="grid-container">
       <div class="grid-item1">
-        <h3>ABOUT ME</h3>
+        <h3 class="animate__animated animate__flipInY">ABOUT ME</h3>
         <ul class="aboutme">
           <li>Successful manager in manufacturing and entrepreneur/manager in cosmetology with 20+ years of professional experience. Seeking a career change in Web Development position as an entry level.</li>
           <li>Someone who is dedicated with improving his skills for success</li>
         </ul>
       </div>
-      <div class="grid-item2"><img src="./myProfilePic.jpg" width="200px" height="250px" id="myProfilePic" alt="myProfilePic"></div>
+      <div class="grid-item2">
+          <img onmouseover="myProfilePic()" src="./myProfilePic.jpg" id="myProfilePic" alt="my Profile Picture"> 
+      </div>
       <div class="grid-item3">
-        <h3>PROFESSIONAL SUMMARY</h3>
+        <h3 class="animate__animated animate__flipInY">PROFESSIONAL SUMMARY</h3>
         <ul class="summary">
             <li>Motivated business professional bringing many years of entrepreneurial experience. Well-versed in training, educating, motivating and supporting staff members</li>
             <li>Detail-oriented candidate with 20 plus years of experience and a zest for solving complex problems. Seeking to use proven project management and design skills to improve quality, cost and time metrics for businesses.</li>
@@ -81,10 +70,16 @@
         </ul>
       </div>
       <div class="grid-item6">
-        <h3>CONTACT ME</h3><br><br><br>
-        <img src="./contact-me.png" width="300px" height="60px" alt="contactIcons"><br><br>
+        <h3 class="animate__animated animate__flip" id="contact">CONTACT</h3><br><br><br>
+        <section>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-google"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+        </section>
         <ul class="contactme">
-          <li>Tel: (480)285-4333</li>
+          <p id = "myPhone">Telephone</p>
+          <button type="button" onclick="myPhone()">Click me for phone number!</button>
           <li><a href="mailto:cdu6680@gmail.com">Email me</a></li>
         </ul>
       </div>
